@@ -4,7 +4,7 @@
 
 
 ```
-$ git clone https://github.com/laalcaking/labi/tree/js-3lb
+$ git clone https://github.com/laalcaking/labi
 ```
 
 ```
