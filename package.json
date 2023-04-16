@@ -1,0 +1,25 @@
+{
+  "name": "3",
+  "version": "1.0.0",
+  "description": "3 laba",
+  "main": "3labaMain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laalcaking/labi.git#js-3lb"
+  },
+  "author": "laalcaking",
+  "license": "ISC",
+  "bin": {
+    "cli": "./3labaMain.js"
+  },
+  "bugs": {
+    "url": "https://github.com/laalcaking/labi/issues"
+  },
+  "homepage": "https://github.com/laalcaking/labi/tree/js-3lb#readme",
+  "dependencies": {
+    "commander": "^10.0.1"
+  }
+}
