@@ -1,12 +1,12 @@
-const fs = require('fs');
-const stream = require('stream');
-const util = require('util');
-const program = require('commander');
+import { createReadStream, createWriteStream } from 'fs';
+import { pipeline as _pipeline } from 'stream';
+import { promisify } from 'util';
+import { program } from 'commander';
 
-const TransformChoise = require('./module/choise.js')
-const valid = require('./module/valid.js');
+import TransformChoise from './module/choise.js';
+import valid from './module/valid.js';
 
-const pipeline = util.promisify(stream.pipeline);
+const pipeline = promisify(_pipeline);
 
 const actions = async _ => {
     const {input, output, action} = program.opts();
@@ -18,8 +18,8 @@ const actions = async _ => {
 
     valid.isEmpty(input) && process.stdout.write('Enter the text and press ENTER to first/secound task | press CTRL + C to exit: ')
 
-    const ReadableStream = !valid.isEmpty(input) ? fs.createReadStream(input) : process.stdin;
-    const WriteableStream = !valid.isEmpty(output) ? fs.createWriteStream((output), { flags: 'a' }) : process.stdout;
+    const ReadableStream = !valid.isEmpty(input) ? createReadStream(input) : process.stdin;
+    const WriteableStream = !valid.isEmpty(output) ? createWriteStream((output), { flags: 'a' }) : process.stdout;
 
     try {
         await pipeline(

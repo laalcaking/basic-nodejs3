@@ -1,7 +1,7 @@
-const { Transform } = require('stream');
+import { Transform } from 'stream';
 
-const { removeDuplicates } = require('./first.js')
-const { sortOddNumbers } = require('./secound.js')
+import { removeDuplicates } from './first.js';
+import { sortOddNumbers } from './second.js';
 
 class TransformChoise extends Transform {
   constructor(action) {
@@ -29,4 +29,4 @@ class TransformChoise extends Transform {
   }
 }
 
-module.exports = TransformChoise;
+export default TransformChoise;

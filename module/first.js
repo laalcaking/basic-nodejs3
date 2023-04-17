@@ -1,4 +1,4 @@
-module.exports.removeDuplicates = function removeDuplicates(strings) {
+export function removeDuplicates(strings) {
 
     const arr = strings.split(',');
     const result = [];

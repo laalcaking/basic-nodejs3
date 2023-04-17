@@ -20,4 +20,4 @@ class valid {
     }
 }
 
-module.exports = valid;
+export default valid;
